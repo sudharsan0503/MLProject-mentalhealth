@@ -3,12 +3,6 @@ import sys
 import joblib
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import shap
-import lime
-import lime.lime_tabular
-from sklearn.inspection import PartialDependenceDisplay
 
 sys.path.insert(0, os.path.abspath("."))
 from src.features import build_preprocessor, TOP_10_COUNTRIES
@@ -141,6 +135,13 @@ def find_counterfactual(model_pipeline, student_dict, target_boost=0.5):
     }
 
 def run_explainability():
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import shap
+    import lime
+    import lime.lime_tabular
+    from sklearn.inspection import PartialDependenceDisplay
+
     print("=== PHASE 4: EXPLAINABLE AI (SHAP, LIME, PDP/ICE, COUNTERFACTUAL) ===")
 
     # 1. Load pipeline and dataset
@@ -250,7 +251,7 @@ def run_explainability():
     plt.close()
 
     # Short written comparison note LIME vs SHAP
-    comp_note = """# LIME vs SHAP Comparison Rationale
+    comp_note = r"""# LIME vs SHAP Comparison Rationale
 
 - **SHAP (SHapley Additive exPlanations)**: Grounded in cooperative game theory (Shapley values). Guarantees consistency, additivity, and local accuracy. Computationally exact for additive/linear models and tree ensembles, offering both global feature rankings and exact local additive contributions.
 - **LIME (Local Interpretable Model-agnostic Explanations)**: Fits a local surrogate linear model around the specific instance. Fast and highly intuitive, but sensitive to sampling noise and hyperparameters.
