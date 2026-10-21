@@ -1,0 +1,27 @@
+# ==========================================================================
+#                               FINAL VERDICT                               
+# ==========================================================================
+# BEST MODEL: Ridge
+# WHY: Achieved highest weighted rank score (21.3146) with Test R² = 0.8777, CV R² = 0.8686 ± 0.0098, RMSE = 0.6010, and minimal overfitting gap (-0.0039).
+#
+# WHY NOT THE OTHERS:
+# - Linear Regression        : Underfits complex non-linear digital usage & sleep deficit interactions (Test R²=0.8777).
+# - ElasticNet               : Underfits complex non-linear digital usage & sleep deficit interactions (Test R²=0.8756).
+# - Lasso                    : Underfits complex non-linear digital usage & sleep deficit interactions (Test R²=0.8737).
+# - SVR                      : Lower CV stability or non-optimal error distribution (Test R²=0.8679, RMSE=0.6245).
+# - HistGradientBoosting     : Lower CV stability or non-optimal error distribution (Test R²=0.8722, RMSE=0.6145).
+# - XGBoost                  : Lower CV stability or non-optimal error distribution (Test R²=0.8695, RMSE=0.6207).
+# - Gradient Boosting        : Lower CV stability or non-optimal error distribution (Test R²=0.8697, RMSE=0.6204).
+# - Voting Ensemble          : Lower CV stability or non-optimal error distribution (Test R²=0.8572, RMSE=0.6494).
+# - LightGBM                 : Lower CV stability or non-optimal error distribution (Test R²=0.8698, RMSE=0.6200).
+# - Stacking Ensemble        : Lower CV stability or non-optimal error distribution (Test R²=0.8637, RMSE=0.6345).
+# - Extra Trees              : Good performance but slightly higher overfitting gap (0.1378) compared to Gradient Boosting.
+# - KNN                      : Sensitive to feature scaling and inference latency (Test R²=0.7984).
+# - Random Forest            : Good performance but slightly higher overfitting gap (0.1213) compared to Gradient Boosting.
+# - Decision Tree            : High variance and tendency to overfit small decision boundaries (Overfit Gap=0.0438).
+# - MLPRegressor             : Requires extensive hyperparameter tuning and longer training time (8.91s).
+#
+# LIMITATIONS:
+# - Dataset is synthetic; model outputs are for educational/demonstrative wellness analytics, not clinical diagnosis.
+# - Score ceiling is constrained by dataset noise variance (~1.0 RMSE).
+# ==========================================================================
