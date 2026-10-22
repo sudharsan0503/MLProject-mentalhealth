@@ -658,7 +658,7 @@ verification_df = pd.DataFrame({
 })
 print("=== PREDICTION VARIABILITY VERIFICATION (5 DISTINCT STUDENTS) ===")
 print(verification_df.to_string(index=False))
-assert (clamped_scores.max() - clamped_scores.min()) >= 1.0, "Scores must differ by at least 1.0!"""",
+assert (clamped_scores.max() - clamped_scores.min()) >= 1.0, 'Scores must differ by at least 1.0!'""",
     make_stream_output("""=== PREDICTION VARIABILITY VERIFICATION (5 DISTINCT STUDENTS) ===
                                                                         Student_Profile  Predicted_Score Predicted_Category
                                1. Thriving Student (Low Screen, 8.5h Sleep, Low Stress)             9.89          Excellent
