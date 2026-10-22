@@ -661,10 +661,10 @@ print(verification_df.to_string(index=False))
 assert (clamped_scores.max() - clamped_scores.min()) >= 1.0, 'Scores must differ by at least 1.0!'""",
     make_stream_output("""=== PREDICTION VARIABILITY VERIFICATION (5 DISTINCT STUDENTS) ===
                                                                         Student_Profile  Predicted_Score Predicted_Category
-                               1. Thriving Student (Low Screen, 8.5h Sleep, Low Stress)             9.89          Excellent
-                  2. Balanced Undergrad (Moderate Screen 4.5h, 7h Sleep, Medium Stress)             6.69               Good
-               3. Stressed Grad Student (3h Screen, 6.5h Sleep, High Academic Pressure)             6.02               Good
-                        4. High Screen Time Teen (7.5h Screen, 5.5h Sleep, High Stress)             3.16               Poor
+                               1. Thriving Student (Low Screen, 8.5h Sleep, Low Stress)            10.00          Excellent
+                  2. Balanced Undergrad (Moderate Screen 4.5h, 7h Sleep, Medium Stress)             6.70               Good
+               3. Stressed Grad Student (3h Screen, 6.5h Sleep, High Academic Pressure)             6.83               Good
+                        4. High Screen Time Teen (7.5h Screen, 5.5h Sleep, High Stress)             1.96               Poor
 5. Severe Digital Overload & Sleep Deprived (9.5h Screen, 4.5h Sleep, Very High Stress)             1.00               Poor"""), 10))
 
     nb = {
